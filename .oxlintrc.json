@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "import", "react", "nextjs"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "error",
+    "eqeqeq": "error",
+    "no-var": "error",
+    "typescript/no-explicit-any": "warn",
+    "react/self-closing-comp": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.config.ts", "*.config.mts"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
